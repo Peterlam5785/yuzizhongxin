@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月子中心声光疗愈解决方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .title-font {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(90deg, #C7D3BF 0%, #F4E5E1 50%, #E6D7E7 100%);
+        }
+        .section {
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #E6D7E7;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .section {
+                padding: 1rem;
+            }
+            .title-font {
+                font-size: 2.5rem; /* Adjust for smaller screens */
+            }
+            .text-xl {
+                font-size: 1.125rem; /* Adjust for smaller screens */
+            }
+            .grid-cols-1 {
+                grid-template-columns: 1fr;
+            }
+            .md\:grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+            .md\:text-6xl {
+                font-size: 3.75rem;
+            }
+            .md\:text-5xl {
+                font-size: 2.5rem;
+            }
+            .md\:h-96 {
+                height: 16rem;
+            }
+            .md\:px-16 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        /* Light Spectrum Animation */
+        @keyframes spectrum-move {
+            0% { background-position: 0% 0; }
+            100% { background-position: 100% 0; }
+        }
+        .light-spectrum-animated {
+            animation: spectrum-move 10s linear infinite alternate;
+            background-size: 200% 100%; /* Make the gradient wider than the div */
+        }
+
+        /* Light Card Hover Effect */
+        .light-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav class="nav-fixed">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-heart text-2xl" style="color: #A57F75;"></i>
+                    <span class="text-xl font-bold" style="color: #5A4A42;">声光疗愈</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="desktop-menu flex items-center space-x-8">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">首页</a>
+                    <a href="#problems" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">问题分析</a>
+                    <a href="#light-therapy" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">光疗系统</a>
+                    <a href="#sound-healing" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">声音疗愈</a>
+                    <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">现场服务</a>
+                    <a href="#value" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">双赢价值</a>
+                    <a href="#implementation" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">实施方案</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium transition-colors" style="color: #5A4A42;" onmouseover="this.style.color='#A57F75'; this.style.backgroundColor='#F4E5E1'" onmouseout="this.style.color='#5A4A42'; this.style.backgroundColor='transparent'">联系我们</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="mobile-menu">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md" style="color: #5A4A42;">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-nav" class="mobile-menu hidden border-t border-gray-200 py-4">
+                <div class="space-y-2">
+                    <a href="#home" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">首页</a>
+                    <a href="#problems" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">问题分析</a>
+                    <a href="#light-therapy" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">光疗系统</a>
+                    <a href="#sound-healing" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">声音疗愈</a>
+                    <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">现场服务</a>
+                    <a href="#value" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">双赢价值</a>
+                    <a href="#implementation" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">实施方案</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-sm font-medium" style="color: #5A4A42;">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Section 1: Home -->
+        <section id="home" class="section flex flex-col items-center justify-center relative overflow-hidden" style="background-color: #FFF8F4;">
+            <!-- Decorative circles -->
+            <div class="absolute top-[-100px] right-[-80px] w-64 h-64 rounded-full opacity-80 z-0" style="background: linear-gradient(135deg, #F4E5E1 0%, #E6D7E7 100%);"></div>
+            <div class="absolute bottom-[-10px] left-[100px] w-40 h-40 rounded-full opacity-80 z-0" style="background: linear-gradient(135deg, #F4E5E1 0%, #E6D7E7 100%);"></div>
+            
+            <div class="relative z-10 text-center max-w-4xl mx-auto">
+                <h1 class="title-font text-4xl md:text-6xl font-bold mb-6" style="color: #5A4A42;">
+                    月子中心声光疗愈解决方案
+                </h1>
+                <div class="h-1 w-96 mx-auto mb-6 gradient-bg rounded-full"></div>
+                <p class="text-xl md:text-2xl font-light mb-8" style="color: #6B5750;">
+                    为产后妈妈解决
+                    <span class="font-medium" style="color: #A57F75;">情绪</span>·
+                    <span class="font-medium" style="color: #A57F75;">睡眠</span>·
+                    <span class="font-medium" style="color: #A57F75;">身体恢复</span>
+                    三大难题
+                </p>
+                
+                <!-- Main Image -->
+                <div class="my-8 rounded-xl shadow-2xl overflow-hidden relative mx-auto max-w-2xl">
+                    <img src="https://picture-search.skywork.ai/aippt/image/sheet/5873531dedc9a4bb5e6c010604ef9e02.jpg" 
+                         alt="母婴温馨时刻" 
+                         class="w-full h-64 md:h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#FFF8F4] to-transparent opacity-20"></div>
+                </div>
+                
+                <a href="#problems" class="inline-block bg-[#A57F75] hover:bg-[#8D6B61] text-white px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    了解解决方案
+                </a>
+            </div>
+            
+            <!-- Footer -->
+            <div class="absolute bottom-8 left-8 right-8 flex justify-between items-center text-sm" style="color: #8D7B74;">
+                <div class="flex items-center">
+                    <i class="fas fa-heartbeat mr-2"></i>
+                    声光疗愈研究院
+                </div>
+                <div>2025.07</div>
+            </div>
+            
+            <!-- Decorative bottom line -->
+            <div class="absolute bottom-0 left-0 w-full h-2 gradient-bg"></div>
+        </section>
+
+        <!-- Section 2: Problems -->
+        <section id="problems" class="section" style="background-color: #FFF8F4;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-4" style="color: #5A4A42;">三大挑战</h2>
+                    <div class="h-1 w-40 mx-auto mb-4 gradient-bg rounded-full"></div>
+                    <p class="text-xl font-light" style="color: #6B5750;">产后妈妈面临的三大核心问题</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Challenge 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #F4E5E1;">
+                            <i class="fas fa-brain text-4xl" style="color: #A57F75;"></i>
+                        </div>
+                        <div class="title-font text-5xl font-bold mb-2" style="color: #A57F75;">30%</div>
+                        <h3 class="text-xl font-bold mb-3" style="color: #5A4A42;">产后抑郁/焦虑</h3>
+                        <p class="leading-relaxed" style="color: #6B5750;">产后妈妈经历不同程度的抑郁或焦虑情绪，影响母亲与新生儿的亲密连接</p>
+                    </div>
+                    
+                    <!-- Challenge 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #C7D3BF;">
+                            <i class="fas fa-moon text-4xl" style="color: #6B8E9F;"></i>
+                        </div>
+                        <div class="title-font text-5xl font-bold mb-2" style="color: #6B8E9F;">90%</div>
+                        <h3 class="text-xl font-bold mb-3" style="color: #5A4A42;">失眠</h3>
+                        <p class="leading-relaxed" style="color: #6B5750;">产后妈妈存在失眠或睡眠质量严重下降，导致精神疲劳，身体恢复缓慢</p>
+                    </div>
+                    
+                    <!-- Challenge 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #E6D7E7;">
+                            <i class="fas fa-band-aid text-4xl" style="color: #8D7B74;"></i>
+                        </div>
+                        <div class="title-font text-5xl font-bold mb-2" style="color: #8D7B74;">身体恢复</div>
+                        <h3 class="text-xl font-bold mb-3" style="color: #5A4A42;">伤口/腰痛/乳腺炎</h3>
+                        <p class="leading-relaxed" style="color: #6B5750;">剖腹产或侧切伤口愈合缓慢，持续性腰背疼痛，以及乳腺问题困扰</p>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm" style="color: #8D7B74;">
+                    数据来源：国家卫健委/《2023中国睡眠质量白皮书》
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Light Therapy -->
+        <section id="light-therapy" class="section" style="background-color: #C7D3BF;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-4" style="color: #5A4A42;">光疗系统</h2>
+                    <div class="h-1 w-40 mx-auto mb-4 bg-gradient-to-r from-[#FFF8F4] to-[#E6D7E7] rounded-full"></div>
+                    <p class="text-xl font-light" style="color: #5A4A42;">三种特定光谱的产后恢复解决方案</p>
+                </div>
+
+                <!-- Light Spectrum Visualization -->
+                <div class="mb-12 px-4 md:px-16">
+                    <div class="h-20 rounded-full shadow-lg relative overflow-hidden light-spectrum-animated" style="background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);">
+                    </div>
+                    <div class="flex justify-between mt-2 text-xs" style="color: #5A4A42;">
+                        <span>红光</span>
+                        <span>橙光</span>
+                        <span>黄光</span>
+                        <span>绿光</span>
+                        <span>蓝光</span>
+                        <span>靛光</span>
+                        <span>紫光</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <!-- Solution 1: Red Light -->
+                    <div class="light-card bg-white/90 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #F4E5E1;">
+                            <i class="fas fa-fire text-4xl" style="color: #A57F75;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">红光 (600-700nm)</h3>
+                        <p class="mb-3" style="color: #5A4A42;">穿透力强，可达皮下组织</p>
+                        <div class="w-full rounded-lg p-3 mb-3" style="background-color: #F4E5E1;">
+                            <p class="text-center font-bold" style="color: #A57F75;">伤口愈合效率提升30%</p>
+                        </div>
+                        <p class="text-sm leading-relaxed" style="color: #5A4A42;">增强细胞线粒体活性，加速血液循环，促进剖腹产或顺产伤口愈合，减轻局部疼痛</p>
+                    </div>
+                    
+                    <!-- Solution 2: Cyan Light -->
+                    <div class="light-card bg-white/90 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #C7D3BF;">
+                            <i class="fas fa-moon text-4xl" style="color: #6B8E9F;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">天青光</h3>
+                        <p class="mb-3" style="color: #5A4A42;">高效调节生物钟</p>
+                        <div class="w-full rounded-lg p-3 mb-3 opacity-70" style="background-color: #C7D3BF;">
+                            <p class="text-center text-white font-bold">同步褪黑素分泌</p>
+                        </div>
+                        <p class="text-sm leading-relaxed" style="color: #5A4A42;">产后荷尔蒙波动及夜间哺乳常导致妈妈的昼夜节律紊乱，天青光能有效改善失眠和睡眠碎片化问题</p>
+                    </div>
+                    
+                    <!-- Solution 3: Interactive Light -->
+                    <div class="light-card bg-white/90 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #E6D7E7;">
+                            <i class="fas fa-lightbulb text-4xl" style="color: #8D7B74;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">互动光</h3>
+                        <p class="mb-3" style="color: #5A4A42;">动态变化的柔和光影</p>
+                        <div class="w-full rounded-lg p-3 mb-3 opacity-70" style="background-color: #E6D7E7;">
+                            <p class="text-center text-white font-bold">情绪舒缓 & 亲子互动</p>
+                        </div>
+                        <p class="text-sm leading-relaxed" style="color: #5A4A42;">创造安全感和趣味性环境，有效舒缓产后妈妈的紧张和焦虑情绪，增进母婴间的情感连接</p>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm opacity-70 mb-4" style="color: #5A4A42;">
+                    <p>Meta分析表明，红光治疗组的伤口愈合总有效率显著高于对照组 (RR=1.21)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Sound Healing -->
+        <section id="sound-healing" class="section" style="background-color: #E6D7E7;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-3" style="color: #5A4A42;">声音疗愈</h2>
+                    <div class="h-1 w-40 mx-auto mb-3 gradient-bg rounded-full"></div>
+                    <p class="text-xl font-light" style="color: #5A4A42;">专业声音疗愈体系，引导大脑产生α波，快速缓解压力</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Column - Features -->
+                    <div class="space-y-6">
+                        <!-- Feature 1 -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #F4E5E1;">
+                                <i class="fas fa-music text-2xl" style="color: #A57F75;"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">林泽鑫定制疗愈音乐</h3>
+                                <p class="text-sm leading-relaxed" style="color: #6B5750;">基于脑波共振原理和心理声学研究创作，每首曲目均旨在引导大脑产生α波，快速缓解压力和负面情绪，提升身心健康</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature 2 -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #C7D3BF;">
+                                <i class="fas fa-heart text-2xl" style="color: #6B8E9F;"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">30分钟焦虑缓解</h3>
+                                <p class="text-sm leading-relaxed" style="color: #6B5750;">临床测试表明，聆听定制疗愈音乐<span class="font-medium" style="color: #A57F75;">30分钟</span>，即可显著降低心率和皮质醇水平，有效缓解焦虑、紧张等负面情绪</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature 3 -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6D7E7;">
+                                <i class="fas fa-clock text-2xl" style="color: #8D7B74;"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">四季能量×昼夜节律</h3>
+                                <p class="text-sm leading-relaxed" style="color: #6B5750;">独创性地将"四季"的能量特质与"昼夜"的节律变化相结合，根据不同季节和一天中的不同时段，播放与之匹配的能量音乐</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Visualization -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold mb-6 text-center" style="color: #5A4A42;">四季能量与昼夜节律音乐方案</h3>
+                        
+                        <!-- Time Slots -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="rounded-full p-4 text-center shadow-md" style="background-color: #F4E5E1;">
+                                <i class="fas fa-sun w-6 h-6 mx-auto mb-2" style="color: #F4A460;"></i>
+                                <div class="text-sm font-medium" style="color: #5A4A42;">清晨唤醒</div>
+                                <div class="text-xs" style="color: #6B5750;">6:00-10:00</div>
+                            </div>
+                            <div class="rounded-full p-4 text-center shadow-md" style="background-color: #C7D3BF;">
+                                <i class="fas fa-sun w-6 h-6 mx-auto mb-2" style="color: #FFD700;"></i>
+                                <div class="text-sm font-medium" style="color: #5A4A42;">午间小憩</div>
+                                <div class="text-xs" style="color: #6B5750;">12:00-14:00</div>
+                            </div>
+                            <div class="rounded-full p-4 text-center shadow-md" style="background-color: #E6D7E7;">
+                                <i class="fas fa-sun w-6 h-6 mx-auto mb-2" style="color: #FF8C00;"></i>
+                                <div class="text-sm font-medium" style="color: #5A4A42;">傍晚舒缓</div>
+                                <div class="text-xs" style="color: #6B5750;">18:00-20:00</div>
+                            </div>
+                            <div class="rounded-full p-4 text-center shadow-md" style="background-color: #F4E5E1;">
+                                <i class="fas fa-moon w-6 h-6 mx-auto mb-2" style="color: #4682B4;"></i>
+                                <div class="text-sm font-medium" style="color: #5A4A42;">深夜助眠</div>
+                                <div class="text-xs" style="color: #6B5750;">22:00-2:00</div>
+                            </div>
+                        </div>
+
+                        <!-- Benefits -->
+                        <div class="grid grid-cols-4 gap-4 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-brain text-xl mb-1" style="color: #A57F75;"></i>
+                                <p class="text-xs" style="color: #6B5750;">调节脑波</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-heart text-xl mb-1" style="color: #6B8E9F;"></i>
+                                <p class="text-xs" style="color: #6B5750;">降低心率</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-ban text-xl mb-1" style="color: #8D7B74;"></i>
+                                <p class="text-xs" style="color: #6B5750;">减少焦虑</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-moon text-xl mb-1" style="color: #A57F75;"></i>
+                                <p class="text-xs" style="color: #6B5750;">改善睡眠</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right text-sm mt-8" style="color: #5A4A42;">
+                    林泽鑫 | 音乐疗愈师
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Services -->
+        <section id="services" class="section relative" style="background-color: #FFF8F4;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            
+            <!-- Background decorative elements -->
+            <div class="absolute top-10 right-10 w-32 h-32 rounded-full opacity-20" style="background-color: #F4E5E1;"></div>
+            <div class="absolute bottom-10 left-10 w-24 h-24 rounded-full opacity-20" style="background-color: #E6D7E7;"></div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-4" style="color: #5A4A42;">现场服务</h2>
+                    <div class="h-1 w-40 mx-auto mb-4 gradient-bg rounded-full"></div>
+                    <p class="text-xl font-light" style="color: #6B5750;">专业团队提供沉浸式疗愈体验</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Side: Service Options -->
+                    <div class="space-y-6">
+                        <!-- Service 1 -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #F4E5E1;">
+                                <i class="fas fa-users text-2xl" style="color: #A57F75;"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">团体疗愈</h3>
+                                <p class="leading-relaxed" style="color: #6B5750;">营造支持性氛围，让妈妈们交流心得、获得同伴支持，共同面对产后挑战</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 2 -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #C7D3BF;">
+                                <i class="fas fa-user-shield text-2xl" style="color: #6B8E9F;"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">一对一疗愈</h3>
+                                <p class="leading-relaxed" style="color: #6B5750;">根据个人具体情况（如特定的身体疼痛、严重的失眠或情绪问题）提供高度个性化的深度干预方案</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 3 -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-start">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6D7E7;">
+                                <i class="fas fa-spa text-2xl" style="color: #8D7B74;"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #5A4A42;">光+音联合</h3>
+                                <p class="leading-relaxed" style="color: #6B5750;">光疗与声音疗愈同步进行，创造多感官、沉浸式的疗愈场域，产生1+1>2的协同效应</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Results -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-center" style="color: #5A4A42;">疗愈效果量化</h3>
+                        <p class="mb-6 text-center" style="color: #6B5750;">通过标准化的心理评估量表（如爱丁堡产后抑郁量表），量化疗愈效果</p>
+                        
+                        <!-- Simple Chart -->
+                        <div class="space-y-4 mb-4">
+                            <div class="flex items-center">
+                                <span class="w-20 text-right mr-4 font-medium" style="color: #5A4A42;">治疗前</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
+                                    <div class="h-8 rounded-full flex items-center justify-end pr-2" style="background-color: #A57F75; width: 75%;">
+                                        <span class="text-white font-bold text-sm">15分</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-20 text-right mr-4 font-medium" style="color: #5A4A42;">治疗后</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
+                                    <div class="h-8 rounded-full flex items-center justify-end pr-2" style="background-color: #6B8E9F; width: 25%;">
+                                        <span class="text-white font-bold text-sm">5分</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-4">
+                            <p class="font-bold" style="color: #5A4A42;">
+                                抑郁评分：<span style="color: #A57F75;">15分</span>（中度风险）→ <span style="color: #6B8E9F;">5分</span>（低风险）
+                            </p>
+                        </div>
+
+                        <div class="text-center">
+                            <p class="italic text-sm" style="color: #6B5750;">*效果数据基于试点项目</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right text-sm mt-8" style="color: #8D7B74;">
+                    声光疗愈研究院 | 2025.07
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Value -->
+        <section id="value" class="section" style="background-color: #FFF8F4;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-3" style="color: #5A4A42;">双赢价值</h2>
+                    <div class="h-1 w-40 mx-auto mb-3 gradient-bg rounded-full"></div>
+                    <p class="text-xl font-light" style="color: #6B5750;">方案为妈妈带来情绪稳定、伤口快速愈合和宝宝安睡，同时为月子中心创造50%服务溢价和50%复购率提升</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Mother Benefits -->
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4" style="background-color: #F4E5E1;">
+                                <i class="fas fa-heart text-2xl" style="color: #A57F75;"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold" style="color: #5A4A42;">对产后妈妈的价值</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-xl p-4 shadow-lg border-l-4" style="border-color: #F4E5E1;">
+                                <div class="flex items-center">
+                                    <i class="fas fa-brain w-6 h-6 mr-3" style="color: #A57F75;"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold" style="color: #5A4A42;">情绪稳定</h4>
+                                        <p class="text-sm leading-relaxed" style="color: #6B5750;">通过定制化的声光环境，有效缓解产后焦虑与抑郁情绪，帮助妈妈们平稳度过心理适应期</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-lg border-l-4" style="border-color: #F4E5E1;">
+                                <div class="flex items-center">
+                                    <i class="fas fa-band-aid w-6 h-6 mr-3" style="color: #A57F75;"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold" style="color: #5A4A42;">伤口快愈</h4>
+                                        <p class="text-sm leading-relaxed" style="color: #6B5750;">科学验证的红光疗法能加速伤口愈合，减轻疼痛，提升身体恢复的舒适度与效率</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-lg border-l-4" style="border-color: #F4E5E1;">
+                                <div class="flex items-center">
+                                    <i class="fas fa-baby w-6 h-6 mr-3" style="color: #A57F75;"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold" style="color: #5A4A42;">宝宝安睡</h4>
+                                        <p class="text-sm leading-relaxed" style="color: #6B5750;">妈妈情绪的稳定和放松，结合宁静的疗愈环境，有助于改善新生儿的睡眠质量，形成和谐的母婴互动</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Benefits -->
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4" style="background-color: #C7D3BF;">
+                                <i class="fas fa-building text-2xl" style="color: #6B8E9F;"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold" style="color: #5A4A42;">对月子中心的价值</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-xl p-4 shadow-lg border-l-4" style="border-color: #C7D3BF;">
+                                <div class="flex items-center">
+                                    <i class="fas fa-gem w-6 h-6 mr-3" style="color: #6B8E9F;"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold" style="color: #5A4A42;">服务溢价<span style="color: #A57F75;" class="ml-2">50%</span></h4>
+                                        <p class="text-sm leading-relaxed" style="color: #6B5750;">引入高科技疗愈项目，使中心从传统的母婴照护升级为高端身心健康管理，为服务提供了坚实的溢价基础</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-lg border-l-4" style="border-color: #C7D3BF;">
+                                <div class="flex items-center">
+                                    <i class="fas fa-sync w-6 h-6 mr-3" style="color: #6B8E9F;"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold" style="color: #5A4A42;">复购/转介绍率提升<span style="color: #A57F75;" class="ml-2">50%</span></h4>
+                                        <p class="text-sm leading-relaxed" style="color: #6B5750;">卓越的疗愈效果和独特的客户体验，能极大提升客户满意度和忠诚度，形成强大的口碑效应</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm" style="color: #8D7B74;">
+                    声光疗愈方案 - 为产后妈妈和月子中心创造双重价值
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Implementation -->
+        <section id="implementation" class="section" style="background-color: #FFF8F4;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-4" style="color: #5A4A42;">3步落地</h2>
+                    <div class="h-1 w-40 mx-auto mb-4 gradient-bg rounded-full"></div>
+                    <p class="text-xl font-light" style="color: #6B5750;">三步实施流程，确保方案顺利落地</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="bg-white rounded-xl p-6 pt-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center relative">
+                            <div class="absolute top-[-25px] left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-2xl title-font" style="background-color: #A57F75;">1</div>
+                            <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 mt-4" style="background-color: #F4E5E1;">
+                                <i class="fas fa-home text-4xl" style="color: #A57F75;"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3" style="color: #5A4A42;">样板房体验</h3>
+                            <p class="leading-relaxed" style="color: #6B5750;">打造标准化声光疗愈体验房，作为展示服务亮点、提供前置体验的绝佳场景，提升签约转化率</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="bg-white rounded-xl p-6 pt-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center relative">
+                            <div class="absolute top-[-25px] left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-2xl title-font" style="background-color: #6B8E9F;">2</div>
+                            <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 mt-4" style="background-color: #C7D3BF;">
+                                <i class="fas fa-hands text-4xl" style="color: #6B8E9F;"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3" style="color: #5A4A42;">现场疗愈</h3>
+                            <p class="leading-relaxed" style="color: #6B5750;">将声光疗愈服务正式纳入妈妈的入住套餐，提供系统化的团体或一对一疗愈课程，作为中心的核心特色服务</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="bg-white rounded-xl p-6 pt-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center relative">
+                            <div class="absolute top-[-25px] left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-2xl title-font" style="background-color: #8D7B74;">3</div>
+                            <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 mt-4" style="background-color: #E6D7E7;">
+                                <i class="fas fa-box-open text-4xl" style="color: #8D7B74;"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3" style="color: #5A4A42;">带回家设备</h3>
+                            <p class="leading-relaxed" style="color: #6B5750;">提供便携式家用疗愈设备的销售或租赁服务，延续对客户的关怀，开辟新的零售收入渠道，实现价值链延伸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right text-sm" style="color: #8D7B74;">
+                    声光疗愈解决方案 | 2025.07
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Contact -->
+        <section id="contact" class="section relative" style="background-color: #FFF8F4;">
+            <div class="gradient-bg w-full h-2 mb-8"></div>
+            <div class="absolute bottom-0 left-0 w-full h-2 gradient-bg"></div>
+            
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="title-font text-4xl md:text-5xl font-bold mb-3" style="color: #5A4A42;">联系我们</h2>
+                    <div class="h-1 w-40 mx-auto mb-3 gradient-bg rounded-full"></div>
+                </div>
+
+                <!-- One-stop Solution Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-12">
+                    <h3 class="text-2xl font-bold mb-6 text-center" style="color: #5A4A42;">一站式解决产后妈妈的核心困扰</h3>
+                    
+                    <div class="flex justify-center flex-wrap gap-4 mb-6">
+                        <div class="flex items-center px-4 py-2 rounded-full transition-all duration-300 hover:scale-105" style="background-color: #F4E5E1;">
+                            <i class="fas fa-heart w-5 h-5 mr-2" style="color: #A57F75;"></i>
+                            <span class="font-medium" style="color: #A57F75;">情绪波动</span>
+                        </div>
+                        <div class="flex items-center px-4 py-2 rounded-full transition-all duration-300 hover:scale-105" style="background-color: #C7D3BF;">
+                            <i class="fas fa-moon w-5 h-5 mr-2" style="color: #6B8E9F;"></i>
+                            <span class="font-medium" style="color: #6B8E9F;">睡眠障碍</span>
+                        </div>
+                        <div class="flex items-center px-4 py-2 rounded-full transition-all duration-300 hover:scale-105" style="background-color: #E6D7E7;">
+                            <i class="fas fa-band-aid w-5 h-5 mr-2" style="color: #8D7B74;"></i>
+                            <span class="font-medium" style="color: #8D7B74;">身体恢复</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center leading-relaxed" style="color: #6B5750;">声光疗愈方案将科技疗愈与人文关怀深度融合，精准契合"疗愈经济"时代下高端月子中心的发展趋势</p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-12">
+                    <h3 class="text-xl font-bold mb-8 text-center" style="color: #5A4A42;">合作諮詢</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4" style="background-color: #F4E5E1;">
+                                <i class="fas fa-phone text-2xl" style="color: #A57F75;"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm mb-1" style="color: #8D7B74;">諮詢專線</p>
+                                <p class="text-lg font-medium" style="color: #5A4A42;">18102535583</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mr-4" style="background-color: #E6D7E7;">
+                                <i class="fab fa-weixin text-2xl" style="color: #8D7B74;"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm mb-1" style="color: #8D7B74;">微信</p>
+                                <p class="text-lg font-medium" style="color: #5A4A42;">Joseph5784</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <div class="text-white p-6 rounded-xl shadow-lg" style="background-color: #5A4A42;">
+                        <p class="text-xl">
+                            <span class="px-3 py-1 rounded" style="background-color: #A57F75;">立即合作</span>
+                            ，率先引入前沿声光疗愈体系，打造行业服务新标杆
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm mt-8" style="color: #8D7B74;">
+                    声光疗愈研究院 | 2025.07
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-nav').classList.add('hidden');
+                }
+            });
+        });
+
+        // Add active state to navigation links based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

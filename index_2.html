@@ -1,0 +1,177 @@
+<!--Actual display size of this page: width=1280, height=720, aspect ratio=16:9.0--><html><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>三大挑战</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #FFF8F4; /* Warm Ivory */
+        }
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: #5A4A42;
+        }
+        .subtitle {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #6B5750;
+        }
+        .challenge-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .percentage {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+        }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(90deg, #C7D3BF 0%, #E6D7E7 100%);
+            border-radius: 3px;
+        }
+        .footer {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #8D7B74;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col items-center p-12 relative">
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#C7D3BF] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<!-- Title Section -->
+<div class="text-center mb-8 z-10">
+<h1 class="title text-5xl mb-4">三大挑战</h1>
+<div class="decorative-line w-40 mx-auto mb-4"></div>
+<p class="subtitle text-xl">产后妈妈面临的三大核心问题</p>
+</div>
+<!-- Challenges Section -->
+<div class="flex justify-between w-full gap-8 z-10">
+<!-- Challenge 1 -->
+<div class="challenge-card flex-1 p-6 flex flex-col items-center">
+<div class="icon-container bg-[#F4E5E1] mb-4">
+<i class="fas fa-brain text-4xl text-[#A57F75]"></i>
+</div>
+<div class="percentage text-[#A57F75] text-5xl mb-2">30%</div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-3">产后抑郁/焦虑</h3>
+<p class="text-center text-[#6B5750] text-[#6B5750]">产后妈妈经历不同程度的抑郁或焦虑情绪，影响母亲与新生儿的亲密连接</p>
+</div>
+<!-- Challenge 2 -->
+<div class="challenge-card flex-1 p-6 flex flex-col items-center">
+<div class="icon-container bg-[#C7D3BF] mb-4">
+<i class="fas fa-moon text-4xl text-[#6B8E9F]"></i>
+</div>
+<div class="percentage text-[#6B8E9F] text-5xl mb-2">90%</div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-3">失眠</h3>
+<p class="text-center text-[#6B5750]">产后妈妈存在失眠或睡眠质量严重下降，导致精神疲劳，身体恢复缓慢</p>
+</div>
+<!-- Challenge 3 -->
+<div class="challenge-card flex-1 p-6 flex flex-col items-center">
+<div class="icon-container bg-[#E6D7E7] mb-4">
+<i class="fas fa-band-aid text-4xl text-[#8D7B74]"></i>
+</div>
+<div class="percentage text-[#8D7B74] text-5xl mb-2">身体恢复</div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-3">伤口/腰痛/乳腺炎</h3>
+<p class="text-center text-[#6B5750]">剖腹产或侧切伤口愈合缓慢，持续性腰背疼痛，以及乳腺问题困扰</p>
+</div>
+</div>
+<!-- Data visualization container -->
+<div class="w-full h-24 mt-8" id="chart-container"></div>
+<!-- Footer -->
+<div class="absolute bottom-8 right-8 footer text-sm">
+            数据来源：国家卫健委/《2023中国睡眠质量白皮书》
+        </div>
+</div>
+<script>
+        // Simple D3.js visualization for the three challenges
+        const chartContainer = d3.select("#chart-container");
+        const width = chartContainer.node().getBoundingClientRect().width;
+        const height = chartContainer.node().getBoundingClientRect().height;
+        
+        // Create SVG
+        const svg = chartContainer.append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        // Data for the challenges
+        const data = [
+            { challenge: "产后抑郁/焦虑", percentage: 30, color: "#A57F75" },
+            { challenge: "失眠", percentage: 90, color: "#6B8E9F" },
+            { challenge: "身体恢复", percentage: 70, color: "#8D7B74" } // Approximate percentage based on document
+        ];
+        
+        // Create horizontal bars
+        const barHeight = 20;
+        const barSpacing = 30;
+        const maxBarWidth = width * 0.7;
+        
+        // Draw the bars
+        svg.selectAll("g")
+            .data(data)
+            .enter()
+            .append("g")
+            .attr("transform", (d, i) => `translate(200, ${i * barSpacing + 10})`)
+            .call(g => {
+                // Challenge label
+                g.append("text")
+                    .attr("x", -10)
+                    .attr("y", barHeight / 2)
+                    .attr("text-anchor", "end")
+                    .attr("dominant-baseline", "middle")
+                    .attr("fill", "#5A4A42")
+                    .attr("font-size", "14px")
+                    .text(d => d.challenge);
+                
+                // Background bar
+                g.append("rect")
+                    .attr("width", maxBarWidth)
+                    .attr("height", barHeight)
+                    .attr("rx", 10)
+                    .attr("ry", 10)
+                    .attr("fill", "#F4E5E1")
+                    .attr("opacity", 0.5);
+                
+                // Percentage bar
+                g.append("rect")
+                    .attr("width", d => (d.percentage / 100) * maxBarWidth)
+                    .attr("height", barHeight)
+                    .attr("rx", 10)
+                    .attr("ry", 10)
+                    .attr("fill", d => d.color);
+                
+                // Percentage text
+                g.append("text")
+                    .attr("x", d => (d.percentage / 100) * maxBarWidth - 20)
+                    .attr("y", barHeight / 2)
+                    .attr("text-anchor", "end")
+                    .attr("dominant-baseline", "middle")
+                    .attr("fill", "white")
+                    .attr("font-size", "14px")
+                    .attr("font-weight", "bold")
+                    .text(d => d.percentage + "%");
+            });
+    </script>
+
+</body></html>

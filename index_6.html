@@ -1,0 +1,236 @@
+<!--Actual display size of this page: width=1280, height=791, aspect ratio=16:9.9--><html><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>双赢价值</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 791px; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 791px;
+            position: relative;
+            background-color: #FFF8F4; /* Warm Ivory */
+        }
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: #5A4A42;
+        }
+        .subtitle {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #6B5750;
+        }
+        .benefit-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(90deg, #C7D3BF 0%, #E6D7E7 100%);
+            border-radius: 3px;
+        }
+        .footer {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #8D7B74;
+        }
+        .highlight-text {
+            color: #A57F75;
+            font-weight: 700;
+        }
+        .center-benefit {
+            border-left: 3px solid #C7D3BF;
+        }
+        .mother-benefit {
+            border-left: 3px solid #F4E5E1;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col items-center p-10 relative">
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#C7D3BF] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<!-- Title Section -->
+<div class="text-center mb-6 z-10">
+<h1 class="title text-5xl mb-3">双赢价值</h1>
+<div class="decorative-line w-40 mx-auto mb-3"></div>
+<p class="subtitle text-xl">方案为妈妈带来情绪稳定、伤口快速愈合和宝宝安睡，同时为月子中心创造50%服务溢价和50%复购率提升</p>
+</div>
+<!-- Benefits Section -->
+<div class="flex justify-between w-full gap-8 z-10 mb-6">
+<!-- Mother Benefits -->
+<div class="w-1/2">
+<div class="flex items-center mb-4">
+<div class="icon-container bg-[#F4E5E1] mr-3">
+<i class="fas fa-heart text-2xl text-[#A57F75]"></i>
+</div>
+<h2 class="text-2xl font-bold text-[#5A4A42]">对产后妈妈的价值</h2>
+</div>
+<div class="space-y-4 pl-4">
+<!-- Benefit 1 -->
+<div class="benefit-card p-4 mother-benefit pl-6">
+<div class="flex items-center">
+<i class="fas fa-brain text-[#A57F75] mr-3"></i>
+<div>
+<h3 class="font-bold text-lg text-[#5A4A42]">情绪稳定</h3>
+<p class="text-[#6B5750]">通过定制化的声光环境，有效缓解产后焦虑与抑郁情绪，帮助妈妈们平稳度过心理适应期</p>
+</div>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="benefit-card p-4 mother-benefit pl-6">
+<div class="flex items-center">
+<i class="fas fa-band-aid text-[#A57F75] mr-3"></i>
+<div>
+<h3 class="font-bold text-lg text-[#5A4A42]">伤口快愈</h3>
+<p class="text-[#6B5750]">科学验证的红光疗法能加速伤口愈合，减轻疼痛，提升身体恢复的舒适度与效率</p>
+</div>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="benefit-card p-4 mother-benefit pl-6">
+<div class="flex items-center">
+<i class="fas fa-baby text-[#A57F75] mr-3"></i>
+<div>
+<h3 class="font-bold text-lg text-[#5A4A42]">宝宝安睡</h3>
+<p class="text-[#6B5750]">妈妈情绪的稳定和放松，结合宁静的疗愈环境，有助于改善新生儿的睡眠质量，形成和谐的母婴互动</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Care Center Benefits -->
+<div class="w-1/2">
+<div class="flex items-center mb-4">
+<div class="icon-container bg-[#C7D3BF] mr-3">
+<i class="fas fa-building text-2xl text-[#6B8E9F]"></i>
+</div>
+<h2 class="text-2xl font-bold text-[#5A4A42]">对月子中心的价值</h2>
+</div>
+<div class="space-y-4 pl-4">
+<!-- Benefit 1 -->
+<div class="benefit-card p-4 center-benefit pl-6">
+<div class="flex items-center">
+<i class="fas fa-gem text-[#6B8E9F] mr-3"></i>
+<div>
+<h3 class="font-bold text-lg text-[#5A4A42]">服务溢价<span class="highlight-text">50%</span></h3>
+<p class="text-[#6B5750]">引入高科技疗愈项目，使中心从传统的母婴照护升级为高端身心健康管理，为服务提供了坚实的溢价基础，满足了新生代家庭对高品质、精细化服务的需求</p>
+</div>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="benefit-card p-4 center-benefit pl-6">
+<div class="flex items-center">
+<i class="fas fa-sync text-[#6B8E9F] mr-3"></i>
+<div>
+<h3 class="font-bold text-lg text-[#5A4A42]">复购/转介绍率提升<span class="highlight-text">50%</span></h3>
+<p class="text-[#6B5750]">卓越的疗愈效果和独特的客户体验，能极大提升客户满意度和忠诚度，形成强大的口碑效应，从而有效提高二胎家庭的复购率及新客户的转介绍率，构筑品牌核心竞争力</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chart Section -->
+<div class="w-full h-32 z-10" id="chart-container"></div>
+<!-- Footer -->
+<div class="absolute bottom-6 right-6 footer text-sm">
+            声光疗愈方案 - 为产后妈妈和月子中心创造双重价值
+        </div>
+</div>
+<script>
+        // Simple D3.js visualization for the benefits
+        const chartContainer = d3.select("#chart-container");
+        const width = chartContainer.node().getBoundingClientRect().width;
+        const height = chartContainer.node().getBoundingClientRect().height;
+        
+        // Create SVG
+        const svg = chartContainer.append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        // Data for the benefits
+        const data = [
+            { category: "服务溢价", value: 50, color: "#F4E5E1", label: "服务溢价50%" },
+            { category: "复购率", value: 50, color: "#C7D3BF", label: "复购率提升50%" }
+        ];
+        
+        // Create horizontal bars
+        const barHeight = 30;
+        const barSpacing = 40;
+        const maxBarWidth = width * 0.7;
+        
+        // Draw the bars
+        const barGroups = svg.selectAll("g")
+            .data(data)
+            .enter()
+            .append("g")
+            .attr("transform", (d, i) => `translate(${width/2 - maxBarWidth/2}, ${i * barSpacing + 10})`);
+        
+        // Background bar
+        barGroups.append("rect")
+            .attr("width", maxBarWidth)
+            .attr("height", barHeight)
+            .attr("rx", 15)
+            .attr("ry", 15)
+            .attr("fill", "#F4E5E1")
+            .attr("opacity", 0.5);
+        
+        // Percentage bar
+        barGroups.append("rect")
+            .attr("width", d => (d.value / 100) * maxBarWidth)
+            .attr("height", barHeight)
+            .attr("rx", 15)
+            .attr("ry", 15)
+            .attr("fill", d => d.color);
+        
+        // Labels
+        barGroups.append("text")
+            .attr("x", -20)
+            .attr("y", barHeight / 2)
+            .attr("text-anchor", "end")
+            .attr("dominant-baseline", "middle")
+            .attr("fill", "#5A4A42")
+            .attr("font-size", "14px")
+            .attr("font-weight", "bold")
+            .text(d => d.category);
+        
+        // Percentage text
+        barGroups.append("text")
+            .attr("x", d => (d.value / 100) * maxBarWidth - 10)
+            .attr("y", barHeight / 2)
+            .attr("text-anchor", "end")
+            .attr("dominant-baseline", "middle")
+            .attr("fill", "white")
+            .attr("font-size", "14px")
+            .attr("font-weight", "bold")
+            .text(d => d.value + "%");
+        
+        // Title for the chart
+        svg.append("text")
+            .attr("x", width / 2)
+            .attr("y", height - 5)
+            .attr("text-anchor", "middle")
+            .attr("fill", "#6B5750")
+            .attr("font-size", "14px")
+            .text("月子中心收益提升");
+    </script>
+
+</body></html>

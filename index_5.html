@@ -1,0 +1,247 @@
+<!--Actual display size of this page: width=1280, height=720, aspect ratio=16:9.0--><html><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>现场服务</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #FFF8F4; /* Warm Ivory */
+        }
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: #5A4A42;
+        }
+        .subtitle {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #6B5750;
+        }
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(90deg, #C7D3BF 0%, #E6D7E7 100%);
+            border-radius: 3px;
+        }
+        .footer {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #8D7B74;
+        }
+        .highlight {
+            color: #A57F75;
+            font-weight: 500;
+        }
+        .chart-container {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col items-center p-12 relative">
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#C7D3BF] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<div class="absolute top-10 right-10 w-32 h-32 rounded-full bg-[#F4E5E1] opacity-20"></div>
+<div class="absolute bottom-10 left-10 w-24 h-24 rounded-full bg-[#E6D7E7] opacity-20"></div>
+<!-- Title Section -->
+<div class="text-center mb-8 z-10">
+<h1 class="title text-5xl mb-4">现场服务</h1>
+<div class="decorative-line w-40 mx-auto mb-4"></div>
+<p class="subtitle text-xl">专业团队提供沉浸式疗愈体验</p>
+</div>
+<!-- Main Content -->
+<div class="flex w-full gap-8 z-10">
+<!-- Left Side: Service Options -->
+<div class="w-1/2 flex flex-col gap-6">
+<!-- Service Type 1 -->
+<div class="service-card p-6 flex items-start">
+<div class="icon-container bg-[#F4E5E1] mr-4 flex-shrink-0">
+<i class="fas fa-users text-2xl text-[#A57F75]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-2">团体疗愈</h3>
+<p class="text-[#6B5750]">营造支持性氛围，让妈妈们交流心得、获得同伴支持，共同面对产后挑战</p>
+</div>
+</div>
+<!-- Service Type 2 -->
+<div class="service-card p-6 flex items-start">
+<div class="icon-container bg-[#C7D3BF] mr-4 flex-shrink-0">
+<i class="fas fa-user-shield text-2xl text-[#6B8E9F]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-2">一对一疗愈</h3>
+<p class="text-[#6B5750]">根据个人具体情况（如特定的身体疼痛、严重的失眠或情绪问题）提供高度个性化的深度干预方案</p>
+</div>
+</div>
+<!-- Service Type 3 -->
+<div class="service-card p-6 flex items-start">
+<div class="icon-container bg-[#E6D7E7] mr-4 flex-shrink-0">
+<i class="fas fa-spa text-2xl text-[#8D7B74]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-2">光+音联合</h3>
+<p class="text-[#6B5750]">光疗与声音疗愈同步进行，创造多感官、沉浸式的疗愈场域，产生1+1&gt;2的协同效应</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Results Visualization -->
+<div class="w-1/2 service-card p-6 flex flex-col">
+<h3 class="font-bold text-xl text-[#5A4A42] mb-4 text-center">疗愈效果量化</h3>
+<p class="text-[#6B5750] mb-4 text-center">通过标准化的心理评估量表（如爱丁堡产后抑郁量表），量化疗愈效果</p>
+<!-- Depression Score Chart -->
+<div class="chart-container flex-grow" id="depression-chart"></div>
+<div class="mt-4 text-center">
+<p class="text-[#5A4A42] font-bold">抑郁评分：<span class="text-[#A57F75]">15分</span>（中度风险）→ <span class="text-[#6B8E9F]">5分</span>（低风险）</p>
+</div>
+<div class="mt-4 text-center">
+<p class="text-[#6B5750] italic">*效果数据基于试点项目</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-8 right-8 footer text-sm">
+            声光疗愈研究院 | 2025.07
+        </div>
+</div>
+<script>
+        // D3.js visualization for depression score reduction
+        const chartContainer = d3.select("#depression-chart");
+        const width = chartContainer.node().getBoundingClientRect().width;
+        const height = chartContainer.node().getBoundingClientRect().height;
+        const margin = {top: 30, right: 30, bottom: 40, left: 50};
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+        
+        // Create SVG
+        const svg = chartContainer.append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        const g = svg.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+        
+        // Data for the chart
+        const data = [
+            { stage: "治疗前", score: 15, color: "#A57F75" },
+            { stage: "治疗后", score: 5, color: "#6B8E9F" }
+        ];
+        
+        // X scale
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.stage))
+            .range([0, innerWidth])
+            .padding(0.3);
+        
+        // Y scale
+        const y = d3.scaleLinear()
+            .domain([0, 20]) // Depression score typically ranges from 0-30, but our data is 0-15
+            .range([innerHeight, 0]);
+        
+        // Add X axis
+        g.append("g")
+            .attr("transform", `translate(0,${innerHeight})`)
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .attr("font-size", "14px")
+            .attr("fill", "#6B5750");
+        
+        // Add Y axis
+        g.append("g")
+            .call(d3.axisLeft(y).ticks(5))
+            .selectAll("text")
+            .attr("font-size", "14px")
+            .attr("fill", "#6B5750");
+        
+        // Y axis label
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -margin.left + 15)
+            .attr("x", -innerHeight / 2)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "14px")
+            .attr("fill", "#6B5750")
+            .text("抑郁评分");
+        
+        // Add bars
+        g.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.stage))
+            .attr("y", d => y(d.score))
+            .attr("width", x.bandwidth())
+            .attr("height", d => innerHeight - y(d.score))
+            .attr("fill", d => d.color)
+            .attr("rx", 6)
+            .attr("ry", 6);
+        
+        // Add score labels on top of bars
+        g.selectAll(".label")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "label")
+            .attr("x", d => x(d.stage) + x.bandwidth() / 2)
+            .attr("y", d => y(d.score) - 10)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "16px")
+            .attr("font-weight", "bold")
+            .attr("fill", d => d.color)
+            .text(d => d.score);
+        
+        // Add arrow to show the reduction
+        g.append("path")
+            .attr("d", `M${x("治疗前") + x.bandwidth() + 10},${y(12)} L${x("治疗后") - 10},${y(12)}`)
+            .attr("stroke", "#8D7B74")
+            .attr("stroke-width", 2)
+            .attr("marker-end", "url(#arrow)");
+        
+        // Add arrowhead marker
+        svg.append("defs").append("marker")
+            .attr("id", "arrow")
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 5)
+            .attr("refY", 0)
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-5L10,0L0,5")
+            .attr("fill", "#8D7B74");
+        
+        // Add text for reduction
+        g.append("text")
+            .attr("x", (x("治疗前") + x.bandwidth() + x("治疗后")) / 2)
+            .attr("y", y(12) - 10)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "14px")
+            .attr("fill", "#8D7B74")
+            .text("↓ 10分");
+    </script>
+
+</body></html>

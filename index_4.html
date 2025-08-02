@@ -1,0 +1,370 @@
+<!--Actual display size of this page: width=1280, height=720, aspect ratio=16:9.0--><html><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>声音疗愈</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; height: 720px; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #E6D7E7; /* Soft Mauve */
+        }
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: #5A4A42;
+        }
+        .subtitle {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #5A4A42;
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .highlight {
+            color: #A57F75; /* Darker shade of Dusty Rose */
+            font-weight: 500;
+        }
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(90deg, #C7D3BF 0%, #E6D7E7 100%);
+            border-radius: 3px;
+        }
+        .footer {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #5A4A42;
+        }
+        .season {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .season:hover {
+            transform: scale(1.05);
+        }
+        .season-icon {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+        .season-name {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .time-label {
+            font-size: 10px;
+            color: #6B5750;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col items-center p-10 relative">
+<!-- 当前位置: top=0px, 剩余空间: 720px -->
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#C7D3BF] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<!-- 当前位置: top=2px, 剩余空间: 718px -->
+<!-- Title Section -->
+<div class="text-center mb-5 z-10">
+<h1 class="title text-5xl mb-3">声音疗愈</h1>
+<div class="decorative-line w-40 mx-auto mb-3"></div>
+<p class="subtitle text-xl">专业声音疗愈体系，引导大脑产生α波，快速缓解压力</p>
+</div>
+<!-- 当前位置: top=100px, 剩余空间: 620px -->
+<!-- Main Content -->
+<div class="flex w-full gap-5 z-10">
+<!-- 当前位置: top=100px, 剩余空间: 620px -->
+<!-- Left Column - Features -->
+<div class="w-1/2 flex flex-col gap-4">
+<!-- 当前位置: top=100px, 剩余空间: 620px -->
+<!-- Feature 1 -->
+<div class="feature-card p-4 flex items-start">
+<div class="icon-container bg-[#F4E5E1] mr-3 flex-shrink-0">
+<i class="fas fa-music text-2xl text-[#A57F75]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-1">林泽鑫定制疗愈音乐</h3>
+<p class="text-[#6B5750] text-sm">基于脑波共振原理和心理声学研究创作，每首曲目均旨在引导大脑产生α波，快速缓解压力和负面情绪，提升身心健康</p>
+</div>
+</div>
+<!-- 当前位置: top=200px, 剩余空间: 520px -->
+<!-- Feature 2 -->
+<div class="feature-card p-4 flex items-start">
+<div class="icon-container bg-[#C7D3BF] mr-3 flex-shrink-0">
+<i class="fas fa-heart-pulse text-2xl text-[#6B8E9F]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-1">30分钟焦虑缓解</h3>
+<p class="text-[#6B5750] text-sm">临床测试表明，聆听定制疗愈音乐<span class="highlight">30分钟</span>，即可显著降低心率和皮质醇水平，有效缓解焦虑、紧张等负面情绪</p>
+</div>
+</div>
+<!-- 当前位置: top=300px, 剩余空间: 420px -->
+<!-- Feature 3 -->
+<div class="feature-card p-4 flex items-start">
+<div class="icon-container bg-[#E6D7E7] mr-3 flex-shrink-0">
+<i class="fas fa-clock text-2xl text-[#8D7B74]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-1">四季能量×昼夜节律</h3>
+<p class="text-[#6B5750] text-sm">独创性地将&#34;四季&#34;的能量特质与&#34;昼夜&#34;的节律变化相结合，根据不同季节和一天中的不同时段，播放与之匹配的能量音乐</p>
+</div>
+</div>
+<!-- 当前位置: top=400px, 剩余空间: 320px -->
+<!-- Feature 4 - Enhanced section about postpartum care center music -->
+<div class="feature-card p-4 flex items-start">
+<div class="icon-container bg-[#F4E5E1] mr-3 flex-shrink-0">
+<i class="fas fa-spa text-2xl text-[#A57F75]"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-1">月子中心环境音乐</h3>
+<p class="text-[#6B5750] text-sm">专为月子中心打造的沉浸式音乐环境，通过精心校准的频率与节奏，创造温馨舒适的空间氛围，形成一个包容、安全的声音场域，让产后妈妈在不知不觉中获得情绪支持与身心滋养</p>
+</div>
+</div>
+<!-- 当前位置: top=500px, 剩余空间: 220px -->
+</div>
+<!-- 当前位置: top=100px, 剩余空间: 620px -->
+<!-- Right Column - Seasonal &amp; Day-Night Visualization -->
+<div class="w-1/2 flex flex-col items-center">
+<div class="feature-card p-5 w-full">
+<h3 class="font-bold text-xl text-[#5A4A42] mb-3 text-center">四季能量与昼夜节律音乐方案</h3>
+<!-- 当前位置: top=150px, 剩余空间: 570px -->
+<!-- Seasons &amp; Day-Night Visualization -->
+<div class="flex justify-between items-center mb-4">
+<!-- Morning -->
+<div class="season bg-[#F4E5E1]">
+<i class="fas fa-sun season-icon text-[#F4A460]"></i>
+<span class="season-name">清晨唤醒</span>
+<span class="time-label">6:00-10:00</span>
+</div>
+<!-- Noon -->
+<div class="season bg-[#C7D3BF]">
+<i class="fas fa-sun season-icon text-[#FFD700]"></i>
+<span class="season-name">午间小憩</span>
+<span class="time-label">12:00-14:00</span>
+</div>
+<!-- Evening -->
+<div class="season bg-[#E6D7E7]">
+<i class="fas fa-sun season-icon text-[#FF8C00]"></i>
+<span class="season-name">傍晚舒缓</span>
+<span class="time-label">18:00-20:00</span>
+</div>
+<!-- Night -->
+<div class="season bg-[#F4E5E1]">
+<i class="fas fa-moon season-icon text-[#4682B4]"></i>
+<span class="season-name">深夜助眠</span>
+<span class="time-label">22:00-2:00</span>
+</div>
+</div>
+<!-- 当前位置: top=270px, 剩余空间: 450px -->
+<!-- Music Flow Visualization -->
+<div class="w-full h-28 mt-3" id="music-flow-container"></div>
+<!-- 当前位置: top=330px, 剩余空间: 390px -->
+<!-- Benefits -->
+<div class="flex justify-around w-full mt-3">
+<div class="text-center">
+<i class="fas fa-brain text-xl text-[#A57F75] mb-1"></i>
+<p class="text-xs text-[#6B5750]">调节脑波</p>
+</div>
+<div class="text-center">
+<i class="fas fa-heart text-xl text-[#6B8E9F] mb-1"></i>
+<p class="text-xs text-[#6B5750]">降低心率</p>
+</div>
+<div class="text-center">
+<i class="fas fa-ban text-xl text-[#8D7B74] mb-1"></i>
+<p class="text-xs text-[#6B5750]">减少焦虑</p>
+</div>
+<div class="text-center">
+<i class="fas fa-moon text-xl text-[#A57F75] mb-1"></i>
+<p class="text-xs text-[#6B5750]">改善睡眠</p>
+</div>
+</div>
+<!-- 当前位置: top=380px, 剩余空间: 340px -->
+<!-- Enhanced section about music energy in postpartum care centers -->
+<div class="mt-4 p-3 bg-[#F4E5E1] bg-opacity-30 rounded-lg">
+<h4 class="font-bold text-center text-[#5A4A42] mb-2">音乐能量改变月子中心氛围</h4>
+<p class="text-xs text-[#6B5750] text-center">
+专业定制的环境音乐能显著提升月子中心的整体氛围，创造一个更加温馨、平静的恢复环境。特定频率的声波能够直接影响人体自主神经系统，帮助产后妈妈更快进入放松状态，促进情绪稳定，加速身体恢复。同时，这种和谐的声音场域也能安抚新生儿情绪，改善亲子互动质量，为母婴关系奠定良好基础。在声音疗愈的月子中心，妈妈们不仅能感受到物理空间的舒适，更能体验到情绪空间的安全与支持。
+</p>
+</div>
+<!-- 当前位置: top=480px, 剩余空间: 240px -->
+</div>
+</div>
+<!-- 当前位置: top=600px, 剩余空间: 120px -->
+</div>
+<!-- Footer -->
+<div class="absolute bottom-6 right-6 footer text-sm">
+            林泽鑫 | 音乐疗愈师
+        </div>
+</div>
+<script>
+        // D3.js visualization for music flow
+        const container = d3.select("#music-flow-container");
+        const width = container.node().getBoundingClientRect().width;
+        const height = container.node().getBoundingClientRect().height;
+
+        // Create SVG
+        const svg = container.append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Create gradient for background
+        const defs = svg.append("defs");
+
+        const gradient = defs.append("linearGradient")
+            .attr("id", "musicGradient")
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "100%")
+            .attr("y2", "0%");
+
+        gradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#F4E5E1");
+
+        gradient.append("stop")
+            .attr("offset", "33%")
+            .attr("stop-color", "#C7D3BF");
+
+        gradient.append("stop")
+            .attr("offset", "66%")
+            .attr("stop-color", "#E6D7E7");
+
+        gradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#F4E5E1");
+
+        // Background
+        svg.append("rect")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("rx", 10)
+            .attr("ry", 10)
+            .attr("fill", "url(#musicGradient)")
+            .attr("opacity", 0.5);
+
+        // Draw sound wave
+        const waveData = [];
+        const numPoints = 100;
+        const amplitude = 20;
+
+        for (let i = 0; i < numPoints; i++) {
+            const x = (width / numPoints) * i;
+            const y = height / 2 + Math.sin(i * 0.1) * amplitude;
+            waveData.push([x, y]);
+        }
+
+        // Create line generator
+        const line = d3.line()
+            .x(d => d[0])
+            .y(d => d[1])
+            .curve(d3.curveBasis);
+
+        // Draw the wave
+        svg.append("path")
+            .datum(waveData)
+            .attr("fill", "none")
+            .attr("stroke", "#A57F75")
+            .attr("stroke-width", 3)
+            .attr("d", line);
+
+        // Add moving circles to represent music nodes
+        const circle1 = svg.append("circle")
+            .attr("r", 8)
+            .attr("fill", "#6B8E9F")
+            .attr("cx", 0)
+            .attr("cy", height / 2);
+
+        const circle2 = svg.append("circle")
+            .attr("r", 6)
+            .attr("fill", "#8D7B74")
+            .attr("cx", width / 3)
+            .attr("cy", height / 2);
+
+        const circle3 = svg.append("circle")
+            .attr("r", 7)
+            .attr("fill", "#A57F75")
+            .attr("cx", 2 * width / 3)
+            .attr("cy", height / 2);
+
+        const circle4 = svg.append("circle")
+            .attr("r", 5)
+            .attr("fill", "#6B8E9F")
+            .attr("cx", width)
+            .attr("cy", height / 2);
+
+        // Animation function
+        function animate() {
+            circle1.attr("cx", 0)
+                .transition()
+                .duration(4000)
+                .ease(d3.easeLinear)
+                .attr("cx", width)
+                .on("end", animate);
+
+            circle2.attr("cx", width / 3)
+                .transition()
+                .duration(4000)
+                .ease(d3.easeLinear)
+                .attr("cx", width + width / 3)
+                .on("end", () => {
+                    circle2.attr("cx", -width / 3)
+                        .transition()
+                        .duration(0)
+                        .on("end", animate);
+                });
+
+            circle3.attr("cx", 2 * width / 3)
+                .transition()
+                .duration(4000)
+                .ease(d3.easeLinear)
+                .attr("cx", width + 2 * width / 3)
+                .on("end", () => {
+                    circle3.attr("cx", -width / 3)
+                        .transition()
+                        .duration(0)
+                        .on("end", animate);
+                });
+
+            circle4.attr("cx", width)
+                .transition()
+                .duration(4000)
+                .ease(d3.easeLinear)
+                .attr("cx", 2 * width)
+                .on("end", () => {
+                    circle4.attr("cx", -width)
+                        .transition()
+                        .duration(0)
+                        .on("end", animate);
+                });
+        }
+
+        // Start animation
+        animate();
+    </script>
+
+</body></html>

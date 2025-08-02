@@ -1,0 +1,148 @@
+<!--Actual display size of this page: width=1280, height=720, aspect ratio=16:9.0--><html><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>联系我们</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; height: 720px; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #FFF8F4; /* Warm Ivory */
+        }
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: #5A4A42;
+        }
+        .subtitle {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #6B5750;
+        }
+        .contact-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(90deg, #C7D3BF 0%, #E6D7E7 100%);
+            border-radius: 3px;
+        }
+        .footer {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #8D7B74;
+        }
+        .solution-pill {
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+        .solution-pill:hover {
+            transform: scale(1.05);
+        }
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(244, 229, 225, 0.3) 0%, rgba(230, 215, 231, 0.3) 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col items-center p-10 relative">
+<!-- 当前位置: top=0px, 剩余空间: 720px -->
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#C7D3BF] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<div class="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#C7D3BF] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<!-- 当前位置: top=0px, 剩余空间: 720px -->
+<!-- Title Section -->
+<div class="text-center mb-8 z-10">
+<h1 class="title text-5xl mb-3">联系我们</h1>
+<div class="decorative-line w-40 mx-auto mb-3"></div>
+</div>
+<!-- 当前位置: top=100px, 剩余空间: 620px -->
+<!-- One-stop Solution Section -->
+<div class="contact-card p-8 w-full max-w-4xl mb-10 z-10">
+<h2 class="text-2xl font-bold text-[#5A4A42] mb-5 text-center">
+                一站式解决产后妈妈的核心困扰
+            </h2>
+<div class="flex justify-center flex-wrap mb-6">
+<div class="solution-pill bg-[#F4E5E1] text-[#A57F75] m-2">
+<i class="fas fa-heart-broken mr-2"></i>情绪波动
+                </div>
+<div class="solution-pill bg-[#C7D3BF] text-[#6B8E9F] m-2">
+<i class="fas fa-moon mr-2"></i>睡眠障碍
+                </div>
+<div class="solution-pill bg-[#E6D7E7] text-[#8D7B74] m-2">
+<i class="fas fa-band-aid mr-2"></i>身体恢复
+                </div>
+</div>
+<p class="text-center text-[#6B5750] mb-4">
+                声光疗愈方案将科技疗愈与人文关怀深度融合，精准契合&#34;疗愈经济&#34;时代下高端月子中心的发展趋势
+            </p>
+</div>
+<!-- 当前位置: top=280px, 剩余空间: 440px -->
+<!-- Contact Information Section - Redesigned -->
+<div class="contact-card p-8 w-full max-w-3xl mb-8 z-10">
+<h3 class="font-bold text-xl text-[#5A4A42] mb-6 text-center">合作諮詢</h3>
+<div class="flex justify-center gap-16">
+    <div class="flex items-center">
+        <div class="icon-container bg-[#F4E5E1] flex-shrink-0">
+            <i class="fas fa-phone text-2xl text-[#A57F75]"></i>
+        </div>
+        <div class="ml-4">
+            <p class="text-sm text-[#8D7B74]">諮詢專線</p>
+            <p class="text-lg text-[#5A4A42] font-medium">18102535583</p>
+        </div>
+    </div>
+    <div class="flex items-center">
+        <div class="icon-container bg-[#E6D7E7] flex-shrink-0">
+            <i class="fab fa-weixin text-2xl text-[#8D7B74]"></i>
+        </div>
+        <div class="ml-4">
+            <p class="text-sm text-[#8D7B74]">微信</p>
+            <p class="text-lg text-[#5A4A42] font-medium">Joseph5784</p>
+        </div>
+    </div>
+</div>
+</div>
+<!-- 当前位置: top=480px, 剩余空间: 240px -->
+<!-- Call to Action -->
+<div class="mt-4 z-10">
+<div class="bg-[#5A4A42] text-white p-5 rounded-lg text-center max-w-2xl">
+<p class="text-xl">
+<span class="highlight-text bg-[#A57F75]">立即合作</span>，率先引入前沿声光疗愈体系，打造行业服务新标杆
+                </p>
+</div>
+</div>
+<!-- 当前位置: top=580px, 剩余空间: 140px -->
+<!-- Footer -->
+<div class="absolute bottom-6 right-8 footer text-sm">
+            声光疗愈研究院 | 2025.07
+        </div>
+</div>
+
+</body></html>

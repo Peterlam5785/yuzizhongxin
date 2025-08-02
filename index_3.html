@@ -1,0 +1,155 @@
+<!--Actual display size of this page: width=1280, height=735, aspect ratio=16:9.2--><html><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>光疗系统</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 735px; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 735px;
+            position: relative;
+            background-color: #C7D3BF; /* Sage Green */
+        }
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: #5A4A42;
+        }
+        .subtitle {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 300;
+            color: #5A4A42;
+        }
+        .light-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .light-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(90deg, #FFF8F4 0%, #E6D7E7 100%);
+            border-radius: 3px;
+        }
+        .highlight {
+            color: #A57F75; /* Darker shade of Dusty Rose */
+            font-weight: 700;
+        }
+        .light-spectrum {
+            height: 80px;
+            border-radius: 40px;
+            background: linear-gradient(90deg, 
+                #FF0000, /* Red */
+                #FF7F00, /* Orange */
+                #FFFF00, /* Yellow */
+                #00FF00, /* Green */
+                #0000FF, /* Blue */
+                #4B0082, /* Indigo */
+                #9400D3  /* Violet */
+            );
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col items-center p-12 relative">
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#FFF8F4] via-[#F4E5E1] to-[#E6D7E7]"></div>
+<!-- Title Section -->
+<div class="text-center mb-6 z-10">
+<h1 class="title text-5xl mb-4">光疗系统</h1>
+<div class="decorative-line w-40 mx-auto mb-4"></div>
+<p class="subtitle text-xl">三种特定光谱的产后恢复解决方案</p>
+</div>
+<!-- Light Spectrum Visualization -->
+<div class="w-full mb-8 px-16 z-10">
+<div class="light-spectrum shadow-lg"></div>
+<div class="flex justify-between mt-2 text-xs text-[#5A4A42]">
+<span>红光</span>
+<span>橙光</span>
+<span>黄光</span>
+<span>绿光</span>
+<span>蓝光</span>
+<span>靛光</span>
+<span>紫光</span>
+</div>
+</div>
+<!-- Light Therapy Solutions -->
+<div class="flex justify-between w-full gap-8 z-10">
+<!-- Solution 1: Red Light -->
+<div class="light-card flex-1 p-6 flex flex-col items-center">
+<div class="icon-container bg-[#F4E5E1] mb-4">
+<i class="fas fa-fire text-4xl text-[#A57F75]"></i>
+</div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-2">红光 (600-700nm)</h3>
+<p class="text-center text-[#5A4A42] mb-3">穿透力强，可达皮下组织</p>
+<div class="w-full bg-[#F4E5E1] rounded-lg p-3 mb-3">
+<p class="text-center text-[#A57F75] font-bold">伤口愈合效率提升30%</p>
+</div>
+<p class="text-center text-[#5A4A42] text-sm">增强细胞线粒体活性，加速血液循环，促进剖腹产或顺产伤口愈合，减轻局部疼痛</p>
+</div>
+<!-- Solution 2: Cyan Light -->
+<div class="light-card flex-1 p-6 flex flex-col items-center">
+<div class="icon-container bg-[#C7D3BF] mb-4">
+<i class="fas fa-moon text-4xl text-[#6B8E9F]"></i>
+</div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-2">天青光</h3>
+<p class="text-center text-[#5A4A42] mb-3">高效调节生物钟</p>
+<div class="w-full bg-[#C7D3BF] rounded-lg p-3 mb-3 opacity-70">
+<p class="text-center text-white font-bold">同步褪黑素分泌</p>
+</div>
+<p class="text-center text-[#5A4A42] text-sm">产后荷尔蒙波动及夜间哺乳常导致妈妈的昼夜节律紊乱，天青光能有效改善失眠和睡眠碎片化问题</p>
+</div>
+<!-- Solution 3: Interactive Light -->
+<div class="light-card flex-1 p-6 flex flex-col items-center">
+<div class="icon-container bg-[#E6D7E7] mb-4">
+<i class="fas fa-lightbulb text-4xl text-[#8D7B74]"></i>
+</div>
+<h3 class="font-bold text-xl text-[#5A4A42] mb-2">互动光</h3>
+<p class="text-center text-[#5A4A42] mb-3">动态变化的柔和光影</p>
+<div class="w-full bg-[#E6D7E7] rounded-lg p-3 mb-3 opacity-70">
+<p class="text-center text-white font-bold">情绪舒缓 &amp; 亲子互动</p>
+</div>
+<p class="text-center text-[#5A4A42] text-sm">创造安全感和趣味性环境，有效舒缓产后妈妈的紧张和焦虑情绪，增进母婴间的情感连接</p>
+</div>
+</div>
+<!-- Scientific Reference -->
+<div class="mt-8 text-center text-sm text-[#5A4A42] opacity-70 z-10">
+<p>Meta分析表明，红光治疗组的伤口愈合总有效率显著高于对照组 (RR=1.21)</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-4 text-sm text-[#5A4A42] opacity-70">
+            3/8
+        </div>
+</div>
+<script>
+        // Add subtle animation to the light spectrum
+        const lightSpectrum = document.querySelector('.light-spectrum');
+        let position = 0;
+        
+        function animateSpectrum() {
+            position = (position + 1) % 100;
+            lightSpectrum.style.backgroundPosition = `${position}%`;
+            requestAnimationFrame(animateSpectrum);
+        }
+        
+        // Initialize animation
+        lightSpectrum.style.backgroundSize = '200%';
+        requestAnimationFrame(animateSpectrum);
+    </script>
+
+</body></html>
